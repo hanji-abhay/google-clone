@@ -323,10 +323,12 @@ main{
      border-radius: 24px;
      padding: 10px 15px;
      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-     margin-bottom: 30px;
+     margin: 0 auto 30px auto;
+     box-sizing: border-box;
         }
  .search-container input {
-     flex: 1;
+     flex: 1 1 auto;
+     min-width: 0;
      border: none;
      outline: none;
      font-size: 16px;
@@ -336,12 +338,11 @@ main{
      color: #555;
      margin-right: 8px;
      margin-top: 3px;
+     flex-shrink: 0;
        }
  .mic{
       width: 30px;
-      min-width: fit-content;
       height: 30px;
-      background-size: contain;
       border: none;
       cursor: pointer;
       margin-right: 8px;
@@ -349,13 +350,13 @@ main{
      justify-content: center;
      border-radius: 20px;
      background:none;
+     flex-shrink: 0;
         }
  .lens {
      width: 30px;
-     min-width: fit-content;
+    flex-shrink: 0;
      height: 30px;
      background: none;
-     background-size: contain;
      border: none;
      cursor: pointer;
      margin-right: 10px;
@@ -366,14 +367,16 @@ main{
        align-items: center;
        background-color: #f8f9fa;
        border-radius: 24px;
-       width: 95px;
-       min-width: fit-content;
+       width: auto;
+       max-width: 95px;
        cursor: pointer;
        height: 35px; 
        border: none ;
        justify-content: center;
        overflow: hidden;
        border: none;
+       flex-shrink: 0;
+       padding: 0 8px;
         }
  .AI-mode::before {
     content: "";
