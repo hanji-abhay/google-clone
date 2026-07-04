@@ -249,3 +249,13 @@ function openEditModal(container) {
     };
 }
 
+const plusWrap = document.querySelector(".plus-icon-wrap");
+const input = document.querySelector(".search-input");
+
+input.addEventListener("focus", () => {
+    plusWrap.classList.add("active");
+
+    setTimeout(() => {
+        plusWrap.classList.remove("active");
+    }, 1000);
+});
